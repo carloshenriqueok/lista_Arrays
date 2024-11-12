@@ -6,11 +6,11 @@
     //Apresente para o usuário se a LETRA que ele quer procurar existe ou não na palavra digitada e qual a primeira posição da LETRA na PALAVRA.
 
     //ENTRADA
-
-
+    const palavra = prompt(`Informe uma palavra`);
+    const letra = prompt(`Informe a letra que você deseja encontrar na palavra que acabou de digitar`);
     //PROCESSAMENTO
-
-
+    const posicao = palavra.search(letra + 1);
+    
     //SAÍDA
-
+    alert(posicao);
 </script>
