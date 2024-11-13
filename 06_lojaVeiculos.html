@@ -10,13 +10,40 @@
     //Apresente a lista final de cada tipo de veículo.
 
     //ENTRADA
-    const veiculoUm = prompt(`Informe o veículo que deseja adicionar:`);
-    const veiculoDois = prompt(`Informe o veículo que deseja adicionar:`);
-    const veiculoTres = prompt(`Informe o veículo que deseja adicionar:`);
-    const tipo = prompt(`Informe o tipo do veículo (SUV, Sedan ou Hatch)`)
+    const carroUm = prompt(`Informe o primeiro carro que deseja adicionar:`);
+    const tipoUm = prompt(`Informe o tipo do primeiro carro (SUV, Sedan ou Hatch):`);
+    const carroDois = prompt(`Informe o segundo carro que deseja adicionar:`);
+    const tipoDois = prompt(`Informe o tipo do segundo carro (SUV, Sedan ou Hatch):`);
+    const carroTres = prompt(`Informe o terceiro carro que deseja adicionar:`);
+    const tipoTres = prompt(`Informe o tipo do terceiro carro (SUV, Sedan ou Hatch):`);
     //PROCESSAMENTO
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let cassosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    let carrosHatch = ["308", "Focus", "i30"];
     
+    if(tipoUm === "SUV"){
+        carrosSUV.push(carroUm);
+    } else if (tipoUm === "Sedan"){
+        cassosSedan.push(carroUm);
+    } else {
+        carrosHatch.push(carroUm);
+    }
+    
+    if(tipoDois === "SUV"){
+        carrosSUV.push(carroDois);
+    } else if (tipoDois === "Sedan"){
+        cassosSedan.push(carroDois);
+    } else {
+        carrosHatch.push(carroDois);
+    }
 
+    if(tipoTres === "SUV"){
+        carrosSUV.push(carroTres);
+    } else if (tipoTres === "Sedan"){
+        cassosSedan.push(carroTres);
+    } else {
+        carrosHatch.push(carroTres);
+    }
     //SAÍDA
-
+    document.write(`Lista final de cada tipo de carro: <br> Carros SUV: `, carrosSUV.join(", "), `<br> Carros Sedan: `, cassosSedan.join(", "), `<br> Carros Hatch: `, carrosHatch.join(", "));
 </script>

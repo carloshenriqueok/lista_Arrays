@@ -9,8 +9,13 @@
     const palavra = prompt(`Informe uma palavra`);
     const letra = prompt(`Informe a letra que você deseja encontrar na palavra que acabou de digitar`);
     //PROCESSAMENTO
-    const posicao = palavra.search(letra + 1);
-    
+    let mensagem;
+    const posicao = palavra.indexOf(letra);
+    if(posicao >= 0){
+        mensagem = `A letra existe na sua palavra e se encontra na posição ${posicao + 1}`
+    } else {
+        mensagem = `A letra que você deseja procurar não existe na palavra informada`
+    }
     //SAÍDA
-    alert(posicao);
+    document.write(mensagem);
 </script>
