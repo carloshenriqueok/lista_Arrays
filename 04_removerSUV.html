@@ -9,11 +9,10 @@
     */
 
     //ENTRADA
-    const remover = prompt(`Qual carro você deseja remover da lista?`).trim();
-
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    const remover = prompt(`Qual carro você deseja remover da lista? \n ${carrosSUV.join("\n-")}`);
     //PROCESSAMENTO
     let lista;
-    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
     document.write(`A lista antiga de SUV: `, carrosSUV.join(", "), `<br>`);
     let mensagem;
     let removido = carrosSUV.indexOf(remover);
