@@ -14,22 +14,16 @@
     //PROCESSAMENTO
     let lista;
     let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
-    document.write(`A lista antiga de SUV:`, carrosSUV.join(", "), `<br>`);
-    if(remover === "Tiggo"){
-        lista = carrosSUV.splice(0, 1);
-    } 
-    else if(remover === "Sportage"){
-    lista = carrosSUV.splice(1, 1);
-    } 
-    else if(remover === "Tucson"){
-    lista = carrosSUV.splice(2, 1);
-    } 
-    else if(remover === "Ecosport"){
-    lista = carrosSUV.splice(3, 1);
-    }                   
-    else{
-        alert("SUV inválido.")
-            }
+    document.write(`A lista antiga de SUV: `, carrosSUV.join(", "), `<br>`);
+    let mensagem;
+    let removido = carrosSUV.indexOf(remover);
+        if(removido >= 0){
+            lista = carrosSUV.splice(removido, 1)
+            mensagem = "A nova lista após a remoção do veículo é: " + " " + carrosSUV.join(", ");
+        } else {
+            mensagem = "O carro informado não existe na lista. Por favor tente novamente"
+        }
     //SAÍDA
-    document.write(`A nova lista após a remoção do veículo é: ${carrosSUV}`);
+        document.write(mensagem);
+   
 </script>
