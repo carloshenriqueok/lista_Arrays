@@ -10,7 +10,7 @@
     const letra = prompt(`Informe a letra que você deseja encontrar na palavra que acabou de digitar`);
     //PROCESSAMENTO
     let mensagem;
-    const posicao = palavra.indexOf(letra);
+    const posicao = palavra.search(letra);
     if(posicao >= 0){
         mensagem = `A letra existe na sua palavra e se encontra na posição ${posicao + 1}`
     } else {
